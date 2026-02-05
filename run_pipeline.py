@@ -226,6 +226,7 @@ def run_ml_training(df, quick=False):
         from sklearn.ensemble import RandomForestRegressor
         from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
         import numpy as np
+        import pandas as pd
     except ImportError:
         print("⚠️  ML libraries not installed. Skipping ML training.")
         print("   Install with: pip install scikit-learn")

@@ -1,16 +1,17 @@
 # Core Data Processing
 pandas>=2.1.0
-numpy>=1.24.0
+numpy>=1.26.0
 
 # Machine Learning
-scikit-learn>=1.3.0
+scikit-learn>=1.5.0
 xgboost>=2.0.0
 lightgbm>=4.1.0
-catboost>=1.2.0
+# catboost>=1.2.0  # Requires CMake/Ninja build tools - install separately if needed
 
-# Deep Learning (Optional)
-tensorflow>=2.14.0
-keras>=2.14.0
+# Deep Learning (Optional - commented out due to Python 3.14 compatibility)
+# tensorflow>=2.14.0
+# keras>=2.14.0
+# Note: TensorFlow requires Python <3.12. Use Python 3.11 if you need TensorFlow.
 
 # Visualization
 matplotlib>=3.8.0

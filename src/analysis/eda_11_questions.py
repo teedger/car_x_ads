@@ -277,7 +277,7 @@ class EDAAnalyzer:
         # Convert numpy types to native Python
         def convert_types(obj):
             if isinstance(obj, dict):
-                return {k: convert_types(v) for k, v in obj.items()}
+                return {str(k) if isinstance(k, tuple) else k: convert_types(v) for k, v in obj.items()}
             elif isinstance(obj, (list, tuple)):
                 return [convert_types(v) for v in obj]
             elif isinstance(obj, (np.integer, np.int64)):
